@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PAINTS London Venue Map</title>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Venue filters">
+        <header class="panel-header">
+          <p class="eyebrow">PAINTS</p>
+          <h1>London Venue Map</h1>
+          <p class="count"><span id="visibleCount">0</span> of <span id="totalCount">0</span> venues</p>
+        </header>
+
+        <section class="controls">
+          <label class="field">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Venue, vibe, best for..." />
+          </label>
+
+          <label class="field">
+            <span>District</span>
+            <select id="districtSelect">
+              <option value="">All districts</option>
+            </select>
+          </label>
+
+          <fieldset class="field">
+            <legend>Category</legend>
+            <div id="categoryFilters" class="check-grid"></div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Price</legend>
+            <div id="priceFilters" class="price-grid"></div>
+          </fieldset>
+
+          <div class="button-row">
+            <button id="resetButton" type="button">Reset</button>
+            <button id="fitButton" type="button">Fit map</button>
+          </div>
+        </section>
+
+        <section class="summary">
+          <h2>Visible Mix</h2>
+          <div id="summaryList" class="summary-list"></div>
+        </section>
+
+        <section class="venue-list">
+          <h2>Venues</h2>
+          <div id="venueList" class="list"></div>
+        </section>
+      </aside>
+
+      <section class="map-wrap" aria-label="Interactive London venue map">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+    <script src="./venues-data.js"></script>
+    <script src="./mapbox-token.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

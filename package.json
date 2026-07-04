@@ -1,0 +1,11 @@
+{
+  "name": "paints-london-venue-map",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive PAINTS London venue map.",
+  "scripts": {
+    "build": "node build-config.js",
+    "dev": "python3 -m http.server 8765",
+    "start": "python3 -m http.server 8765"
+  }
+}
