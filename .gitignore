@@ -2,3 +2,5 @@
 node_modules/
 .vercel/
 mapbox-token.js
+public/
+.vercel
