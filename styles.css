@@ -229,10 +229,30 @@ input[type="checkbox"] {
   border-color: #94a3b8;
 }
 
+.venue-card-top {
+  align-items: start;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr auto;
+}
+
 .venue-title {
   font-size: 14px;
   font-weight: 800;
   line-height: 1.25;
+}
+
+.score-badge {
+  align-items: center;
+  background: #17202a;
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 850;
+  justify-content: center;
+  min-width: 32px;
+  padding: 4px 7px;
 }
 
 .venue-meta,

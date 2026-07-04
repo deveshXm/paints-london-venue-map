@@ -328,7 +328,10 @@
     return [
       venue.name,
       venue.district,
+      venue.neighbourhood,
       venue.category,
+      venue.tier,
+      venue.paint_score,
       venue.price,
       venue.best_for,
       venue.vibe,
@@ -397,9 +400,10 @@
     return `
       <div class="popup">
         <h3>${escapeHtml(venue.name)}</h3>
-        <p><strong>${escapeHtml(venue.category)}</strong> · ${escapeHtml(venue.district)} · ${escapeHtml(venue.price || "unknown")}</p>
+        <p><strong>${escapeHtml(venue.category)}</strong> · ${escapeHtml(venue.district)} · ${escapeHtml(venue.price || "unknown")} · Score ${escapeHtml(formatScore(venue.paint_score))}</p>
         <p>${escapeHtml(venue.why_go || "")}</p>
         <p><strong>Best for:</strong> ${escapeHtml(venue.best_for || "")}</p>
+        <p><strong>Walk-in:</strong> ${escapeHtml(venue.walk_in_policy || "unknown")}</p>
         <a href="${venue.google_location}" target="_blank" rel="noreferrer">Open in Google Maps</a>
       </div>
     `;
@@ -448,8 +452,11 @@
       card.className = "venue-card";
       card.dataset.venueId = String(venue.id);
       card.innerHTML = `
-        <div class="venue-title">${escapeHtml(venue.name)}</div>
-        <div class="venue-meta">${escapeHtml(venue.category)} · ${escapeHtml(venue.district)} · ${escapeHtml(venue.price || "unknown")}</div>
+        <div class="venue-card-top">
+          <div class="venue-title">${escapeHtml(venue.name)}</div>
+          <div class="score-badge">${escapeHtml(formatScore(venue.paint_score))}</div>
+        </div>
+        <div class="venue-meta">${escapeHtml(venue.category)} · ${escapeHtml(venue.district)} · ${escapeHtml(venue.price || "unknown")} · ${escapeHtml(venue.tier || "Tier n/a")}</div>
         <div class="venue-note">${escapeHtml(venue.best_for || venue.why_go || "")}</div>
       `;
       card.addEventListener("click", () => {
@@ -499,6 +506,12 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function formatScore(value) {
+    const score = Number(value);
+    if (!Number.isFinite(score)) return "n/a";
+    return String(Math.round(score));
   }
 
   render();
