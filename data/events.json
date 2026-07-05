@@ -1,0 +1,62 @@
+[
+  {
+    "id": "e-1-1-e3ed2",
+    "week": 1,
+    "title": "Fulham Pages & Coffee at Nomad Books",
+    "category": "Books & Coffee",
+    "date_time": "Saturday afternoon · Week 1",
+    "area": "Hammersmith and Fulham",
+    "user_ids": [
+      "s2u1",
+      "s2u2"
+    ],
+    "primary_venue_id": "198",
+    "backup_venue_id": "600",
+    "match_quality": "good",
+    "fallback_reason": "Primary fit is strong for Books & Coffee, $$ pricing, Saturday afternoon hours, and geography between Kensington/Chelsea and Hammersmith/Fulham. Remaining tradeoff: Nomad Books has unknown confirmed seated capacity for a 2-person-plus group and the same-category backup is atmospheric but operationally weaker, with irregular/unverified hours and no confirmed cafe seating.",
+    "adjusted_match": false,
+    "compromised_metrics": [],
+    "storyline": "Settle into Nomad Books, a Fulham Road independent known for its stay-awhile bookshop feel, cafe references, and thoughtful recommendations. The afternoon is built around browsing shelves, swapping recent reads, and picking one title everyone would argue for over coffee.",
+    "meeting_point_notes": "Meet just inside Nomad Books near the front display/counter. Host should confirm same-day cafe seating or a quiet discussion spot for the group; if the shop is unexpectedly full, the backup is Hurlingham Books on Fulham High Street / Putney Bridge, about a 13-minute walk away.",
+    "created_at": "2026-07-05T09:30:50.728Z",
+    "created_by": "openai_agents"
+  },
+  {
+    "id": "e-1-2-8a902",
+    "week": 1,
+    "title": "Bookshop-Bar Stories at Morocco Bound Wandsworth",
+    "category": "Books & Coffee",
+    "date_time": "Saturday evening · Week 1",
+    "area": "Wandsworth",
+    "user_ids": [
+      "s2u3",
+      "s2u4",
+      "s2u5"
+    ],
+    "primary_venue_id": "125",
+    "backup_venue_id": "391",
+    "match_quality": "good",
+    "fallback_reason": "Primary is strong for Books & Coffee, price-compatible, and has believable Saturday evening hours, but public capacity details for a seated group are not confirmed. No close same-category evening backup was operationally plausible; the backup is a category-mismatch wine bar about a 20+ minute walk away, chosen because it is open Saturday evening, $$, and more group-friendly than closer compact/price-stretch alternatives.",
+    "adjusted_match": true,
+    "compromised_metrics": [
+      {
+        "user_id": "s2u3",
+        "metric": "availability",
+        "from": "Saturday morning",
+        "to": "Saturday evening",
+        "severity": "medium"
+      },
+      {
+        "user_id": "s2u5",
+        "metric": "availability",
+        "from": "Friday evening",
+        "to": "Saturday evening",
+        "severity": "medium"
+      }
+    ],
+    "storyline": "Start the evening in a community bookshop that blends shelves, coffee and a bar into one social space. Morocco Bound’s Wandsworth outpost brings a south-London literary hangout feel to New Acres, making it easy to swap current reads, browse a few spines, and let the conversation move from books into Saturday-night drinks.",
+    "meeting_point_notes": "Meet just inside Morocco Bound Bookshop Wandsworth at the New Acres / Pilots Walk entrance. Host should arrive early and confirm seating for 3 people; if the shop is event-heavy or seating is tight, use Humble Grape Battersea as the backup evening drinks-and-chat venue.",
+    "created_at": "2026-07-05T09:30:58.293Z",
+    "created_by": "openai_agents"
+  }
+]

@@ -21,6 +21,10 @@ for (const file of [
   fs.copyFileSync(path.join(__dirname, file), path.join(publicDir, file));
 }
 
+fs.cpSync(path.join(__dirname, "data"), path.join(publicDir, "data"), {
+  recursive: true,
+});
+
 fs.writeFileSync(
   path.join(publicDir, "mapbox-token.js"),
   `window.MAPBOX_ACCESS_TOKEN = ${JSON.stringify(token)};\n`

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PAINTS London Venue Map</title>
+    <link rel="icon" href="data:," />
     <link
       rel="stylesheet"
       href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css"
@@ -16,7 +17,12 @@
         <header class="panel-header">
           <p class="eyebrow">PAINTS</p>
           <h1>London Venue Map</h1>
-          <p class="count"><span id="visibleCount">0</span> of <span id="totalCount">0</span> venues</p>
+          <p class="count"><span id="visibleCount">0</span> of <span id="totalCount">0</span> shown</p>
+          <div class="mode-tabs" aria-label="Map mode">
+            <button class="mode-tab active" data-mode="venues" type="button">Venues</button>
+            <button class="mode-tab" data-mode="events" type="button">Events</button>
+            <button class="mode-tab" data-mode="users" type="button">Users</button>
+          </div>
         </header>
 
         <section class="controls">
@@ -48,13 +54,26 @@
           </div>
         </section>
 
+        <section class="sim-panel">
+          <div class="sim-topline">
+            <h2>Agent Runner</h2>
+            <span id="weekLabel">Week 1</span>
+          </div>
+          <div class="button-row">
+            <button id="addUserButton" type="button">Add user</button>
+            <button id="runAgentsButton" type="button">Run agents</button>
+          </div>
+          <button id="resetSimButton" class="quiet-button" type="button">Reset simulation</button>
+          <p id="agentLog" class="agent-log">Ready.</p>
+        </section>
+
         <section class="summary">
           <h2>Visible Mix</h2>
           <div id="summaryList" class="summary-list"></div>
         </section>
 
         <section class="venue-list">
-          <h2>Venues</h2>
+          <h2 id="listTitle">Venues</h2>
           <div id="venueList" class="list"></div>
         </section>
       </aside>
@@ -63,6 +82,90 @@
         <div id="map"></div>
       </section>
     </main>
+
+    <dialog id="userModal" class="modal">
+      <form id="userForm" method="dialog">
+        <div class="modal-header">
+          <h2>Add user</h2>
+          <button id="closeUserModal" type="button" aria-label="Close">×</button>
+        </div>
+        <label class="field">
+          <span>Name</span>
+          <input id="userNameInput" required placeholder="Kiran" />
+        </label>
+        <div class="form-grid">
+          <label class="field">
+            <span>Age</span>
+            <input id="userAgeInput" type="number" min="18" max="90" required value="29" />
+          </label>
+          <label class="field">
+            <span>District</span>
+            <select id="userDistrictInput" required></select>
+          </label>
+        </div>
+        <label class="field">
+          <span>Category</span>
+          <select id="userCategoryInput" required></select>
+        </label>
+        <div class="form-grid">
+          <label class="field">
+            <span>Availability</span>
+            <select id="userAvailabilityInput">
+              <option>Friday evening</option>
+              <option>Saturday morning</option>
+              <option>Saturday afternoon</option>
+              <option>Sunday morning</option>
+              <option>Sunday afternoon</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Price</span>
+            <select id="userPriceInput">
+              <option value="$">$</option>
+              <option value="$$" selected>$$</option>
+              <option value="$$$">$$$</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label class="field">
+            <span>Gender</span>
+            <select id="userGenderInput">
+              <option>woman</option>
+              <option>man</option>
+              <option>non-binary</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Gender mix</span>
+            <select id="userGenderMixInput">
+              <option value="mixed" selected>mixed</option>
+              <option value="same gender">same gender</option>
+              <option value="no preference">no preference</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span>Age preference</span>
+          <select id="userAgePreferenceInput">
+            <option>25-35</option>
+            <option>30-45</option>
+            <option>35-55</option>
+            <option>no preference</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Max travel time</span>
+          <select id="userTravelTimeInput">
+            <option value="15 min">15 min</option>
+            <option value="30 min" selected>30 min</option>
+            <option value="45 min">45 min</option>
+            <option value="an hour or more">an hour or more</option>
+          </select>
+        </label>
+        <button class="primary-button" type="submit">Save user</button>
+      </form>
+    </dialog>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
     <script src="./venues-data.js"></script>

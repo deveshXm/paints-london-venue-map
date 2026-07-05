@@ -44,7 +44,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .panel-header {
@@ -82,18 +83,36 @@ h2 {
   margin-top: 8px;
 }
 
+.mode-tabs {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 12px;
+}
+
+.mode-tab {
+  border-radius: 999px;
+  font-size: 12px;
+  min-height: 32px;
+  padding: 6px 8px;
+}
+
+.mode-tab.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
 .controls,
 .summary,
-.venue-list {
+.venue-list,
+.sim-panel {
   padding: 14px 16px;
   border-bottom: 1px solid var(--line);
 }
 
 .venue-list {
   border-bottom: 0;
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
 }
 
 .field {
@@ -146,6 +165,42 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+}
+
+.sim-topline {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sim-topline span {
+  background: #eef2ff;
+  border-radius: 999px;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 8px;
+}
+
+.quiet-button {
+  color: var(--muted);
+  margin-top: 8px;
+  width: 100%;
+}
+
+.primary-button {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+  width: 100%;
+}
+
+.agent-log {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 9px;
 }
 
 .check-grid,
@@ -300,6 +355,46 @@ input[type="checkbox"] {
   color: var(--blue);
   font-weight: 750;
   text-decoration: none;
+}
+
+.modal {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.28);
+  max-width: 520px;
+  padding: 0;
+  width: calc(100vw - 32px);
+}
+
+.modal::backdrop {
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.modal form {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.modal-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header button {
+  border-radius: 999px;
+  font-size: 20px;
+  line-height: 1;
+  min-height: 34px;
+  padding: 0;
+  width: 34px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .mapboxgl-ctrl-group {

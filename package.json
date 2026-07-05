@@ -5,7 +5,13 @@
   "description": "Interactive PAINTS London venue map.",
   "scripts": {
     "build": "node build-config.js",
-    "dev": "python3 -m http.server 8765",
-    "start": "python3 -m http.server 8765"
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test:tools": "node scripts/venue-tool-behavior.test.mjs && node scripts/adjusted-grouping.test.mjs && node scripts/selected-event-backup-ui.test.mjs",
+    "test:api": "node scripts/background-job-api.test.mjs"
+  },
+  "dependencies": {
+    "@openai/agents": "^0.12.0",
+    "zod": "^4.4.3"
   }
 }

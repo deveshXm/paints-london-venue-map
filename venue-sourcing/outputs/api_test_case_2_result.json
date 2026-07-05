@@ -1,0 +1,437 @@
+{
+  "input_users": [
+    {
+      "id": "s2u1",
+      "name": "Hassan",
+      "age": 33,
+      "gender": "man",
+      "district": "Kensington and Chelsea",
+      "category": "Books & Coffee",
+      "availability": "Saturday afternoon",
+      "price_preference": "$$",
+      "gender_mix_preference": "mixed",
+      "age_preference": "28-38",
+      "travel_time_preference": "30 min",
+      "latitude": 51.499,
+      "longitude": -0.194,
+      "last_venue_ids": [],
+      "last_event_user_ids": [],
+      "last_event_feedback": null,
+      "pending_group_week": 0
+    },
+    {
+      "id": "s2u2",
+      "name": "Lucy",
+      "age": 31,
+      "gender": "woman",
+      "district": "Hammersmith and Fulham",
+      "category": "Books & Coffee",
+      "availability": "Saturday afternoon",
+      "price_preference": "$$",
+      "gender_mix_preference": "mixed",
+      "age_preference": "28-38",
+      "travel_time_preference": "30 min",
+      "latitude": 51.492,
+      "longitude": -0.223,
+      "last_venue_ids": [],
+      "last_event_user_ids": [],
+      "last_event_feedback": null,
+      "pending_group_week": 0
+    },
+    {
+      "id": "s2u3",
+      "name": "Deepa",
+      "age": 34,
+      "gender": "woman",
+      "district": "Wandsworth",
+      "category": "Books & Coffee",
+      "availability": "Saturday morning",
+      "price_preference": "$$",
+      "gender_mix_preference": "mixed",
+      "age_preference": "28-38",
+      "travel_time_preference": "30 min",
+      "latitude": 51.457,
+      "longitude": -0.191,
+      "last_venue_ids": [],
+      "last_event_user_ids": [],
+      "last_event_feedback": null,
+      "pending_group_week": 0
+    },
+    {
+      "id": "s2u4",
+      "name": "Gareth",
+      "age": 36,
+      "gender": "man",
+      "district": "Westminster",
+      "category": "Books & Coffee",
+      "availability": "Saturday evening",
+      "price_preference": "$$",
+      "gender_mix_preference": "mixed",
+      "age_preference": "30-40",
+      "travel_time_preference": "45 min",
+      "latitude": 51.497,
+      "longitude": -0.137,
+      "last_venue_ids": [],
+      "last_event_user_ids": [],
+      "last_event_feedback": null,
+      "pending_group_week": 0
+    },
+    {
+      "id": "s2u5",
+      "name": "Zoe",
+      "age": 32,
+      "gender": "woman",
+      "district": "Kensington and Chelsea",
+      "category": "Books & Coffee",
+      "availability": "Friday evening",
+      "price_preference": "$$",
+      "gender_mix_preference": "mixed",
+      "age_preference": "28-38",
+      "travel_time_preference": "30 min",
+      "latitude": 51.499,
+      "longitude": -0.194,
+      "last_venue_ids": [],
+      "last_event_user_ids": [],
+      "last_event_feedback": null,
+      "pending_group_week": 0
+    }
+  ],
+  "job": {
+    "job_id": "job-1783243778448-8064c9",
+    "status": "completed",
+    "phase": "completed",
+    "created_at": "2026-07-05T09:29:38.448Z",
+    "updated_at": "2026-07-05T09:31:01.952Z",
+    "finished_at": "2026-07-05T09:31:01.952Z",
+    "progress": {
+      "total_users": 5,
+      "batches_total": 1,
+      "batches_done": 1,
+      "groups_created": 2,
+      "groups_total": 2,
+      "planned_events": 2,
+      "events_created": 2,
+      "event_groups_done": 2,
+      "failed_units": 0,
+      "conflicts": 0
+    },
+    "failures": [],
+    "log": "Real agents created 2 events from 2 groups across 1 batches. 2 primary venues claimed. 0 units failed. 0 venue conflicts retried.",
+    "error": "",
+    "users": [
+      {
+        "id": "s2u1",
+        "name": "Hassan",
+        "age": 33,
+        "gender": "man",
+        "district": "Kensington and Chelsea",
+        "category": "Books & Coffee",
+        "availability": "Saturday afternoon",
+        "price_preference": "$$",
+        "gender_mix_preference": "mixed",
+        "age_preference": "28-38",
+        "travel_time_preference": "30 min",
+        "latitude": 51.499,
+        "longitude": -0.194,
+        "last_venue_ids": [
+          "198"
+        ],
+        "last_event_user_ids": [
+          "s2u2"
+        ],
+        "last_event_feedback": {
+          "event_id": "e-1-1-e3ed2",
+          "venue_rating": null,
+          "group_rating": null,
+          "note": "No feedback yet."
+        },
+        "pending_group_week": 0,
+        "last_event_history": [
+          {
+            "event_id": "e-1-1-e3ed2",
+            "user_ids": [
+              "s2u2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s2u2",
+        "name": "Lucy",
+        "age": 31,
+        "gender": "woman",
+        "district": "Hammersmith and Fulham",
+        "category": "Books & Coffee",
+        "availability": "Saturday afternoon",
+        "price_preference": "$$",
+        "gender_mix_preference": "mixed",
+        "age_preference": "28-38",
+        "travel_time_preference": "30 min",
+        "latitude": 51.492,
+        "longitude": -0.223,
+        "last_venue_ids": [
+          "198"
+        ],
+        "last_event_user_ids": [
+          "s2u1"
+        ],
+        "last_event_feedback": {
+          "event_id": "e-1-1-e3ed2",
+          "venue_rating": null,
+          "group_rating": null,
+          "note": "No feedback yet."
+        },
+        "pending_group_week": 0,
+        "last_event_history": [
+          {
+            "event_id": "e-1-1-e3ed2",
+            "user_ids": [
+              "s2u1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s2u3",
+        "name": "Deepa",
+        "age": 34,
+        "gender": "woman",
+        "district": "Wandsworth",
+        "category": "Books & Coffee",
+        "availability": "Saturday morning",
+        "price_preference": "$$",
+        "gender_mix_preference": "mixed",
+        "age_preference": "28-38",
+        "travel_time_preference": "30 min",
+        "latitude": 51.457,
+        "longitude": -0.191,
+        "last_venue_ids": [
+          "125"
+        ],
+        "last_event_user_ids": [
+          "s2u4",
+          "s2u5"
+        ],
+        "last_event_feedback": {
+          "event_id": "e-1-2-8a902",
+          "venue_rating": null,
+          "group_rating": null,
+          "note": "No feedback yet."
+        },
+        "pending_group_week": 0,
+        "last_event_history": [
+          {
+            "event_id": "e-1-2-8a902",
+            "user_ids": [
+              "s2u4",
+              "s2u5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s2u4",
+        "name": "Gareth",
+        "age": 36,
+        "gender": "man",
+        "district": "Westminster",
+        "category": "Books & Coffee",
+        "availability": "Saturday evening",
+        "price_preference": "$$",
+        "gender_mix_preference": "mixed",
+        "age_preference": "30-40",
+        "travel_time_preference": "45 min",
+        "latitude": 51.497,
+        "longitude": -0.137,
+        "last_venue_ids": [
+          "125"
+        ],
+        "last_event_user_ids": [
+          "s2u3",
+          "s2u5"
+        ],
+        "last_event_feedback": {
+          "event_id": "e-1-2-8a902",
+          "venue_rating": null,
+          "group_rating": null,
+          "note": "No feedback yet."
+        },
+        "pending_group_week": 0,
+        "last_event_history": [
+          {
+            "event_id": "e-1-2-8a902",
+            "user_ids": [
+              "s2u3",
+              "s2u5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s2u5",
+        "name": "Zoe",
+        "age": 32,
+        "gender": "woman",
+        "district": "Kensington and Chelsea",
+        "category": "Books & Coffee",
+        "availability": "Friday evening",
+        "price_preference": "$$",
+        "gender_mix_preference": "mixed",
+        "age_preference": "28-38",
+        "travel_time_preference": "30 min",
+        "latitude": 51.499,
+        "longitude": -0.194,
+        "last_venue_ids": [
+          "125"
+        ],
+        "last_event_user_ids": [
+          "s2u3",
+          "s2u4"
+        ],
+        "last_event_feedback": {
+          "event_id": "e-1-2-8a902",
+          "venue_rating": null,
+          "group_rating": null,
+          "note": "No feedback yet."
+        },
+        "pending_group_week": 0,
+        "last_event_history": [
+          {
+            "event_id": "e-1-2-8a902",
+            "user_ids": [
+              "s2u3",
+              "s2u4"
+            ]
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "e-1-1-e3ed2",
+        "week": 1,
+        "title": "Fulham Pages & Coffee at Nomad Books",
+        "category": "Books & Coffee",
+        "date_time": "Saturday afternoon · Week 1",
+        "area": "Hammersmith and Fulham",
+        "user_ids": [
+          "s2u1",
+          "s2u2"
+        ],
+        "primary_venue_id": "198",
+        "backup_venue_id": "600",
+        "match_quality": "good",
+        "fallback_reason": "Primary fit is strong for Books & Coffee, $$ pricing, Saturday afternoon hours, and geography between Kensington/Chelsea and Hammersmith/Fulham. Remaining tradeoff: Nomad Books has unknown confirmed seated capacity for a 2-person-plus group and the same-category backup is atmospheric but operationally weaker, with irregular/unverified hours and no confirmed cafe seating.",
+        "adjusted_match": false,
+        "compromised_metrics": [],
+        "storyline": "Settle into Nomad Books, a Fulham Road independent known for its stay-awhile bookshop feel, cafe references, and thoughtful recommendations. The afternoon is built around browsing shelves, swapping recent reads, and picking one title everyone would argue for over coffee.",
+        "meeting_point_notes": "Meet just inside Nomad Books near the front display/counter. Host should confirm same-day cafe seating or a quiet discussion spot for the group; if the shop is unexpectedly full, the backup is Hurlingham Books on Fulham High Street / Putney Bridge, about a 13-minute walk away.",
+        "created_at": "2026-07-05T09:30:50.728Z",
+        "created_by": "openai_agents"
+      },
+      {
+        "id": "e-1-2-8a902",
+        "week": 1,
+        "title": "Bookshop-Bar Stories at Morocco Bound Wandsworth",
+        "category": "Books & Coffee",
+        "date_time": "Saturday evening · Week 1",
+        "area": "Wandsworth",
+        "user_ids": [
+          "s2u3",
+          "s2u4",
+          "s2u5"
+        ],
+        "primary_venue_id": "125",
+        "backup_venue_id": "391",
+        "match_quality": "good",
+        "fallback_reason": "Primary is strong for Books & Coffee, price-compatible, and has believable Saturday evening hours, but public capacity details for a seated group are not confirmed. No close same-category evening backup was operationally plausible; the backup is a category-mismatch wine bar about a 20+ minute walk away, chosen because it is open Saturday evening, $$, and more group-friendly than closer compact/price-stretch alternatives.",
+        "adjusted_match": true,
+        "compromised_metrics": [
+          {
+            "user_id": "s2u3",
+            "metric": "availability",
+            "from": "Saturday morning",
+            "to": "Saturday evening",
+            "severity": "medium"
+          },
+          {
+            "user_id": "s2u5",
+            "metric": "availability",
+            "from": "Friday evening",
+            "to": "Saturday evening",
+            "severity": "medium"
+          }
+        ],
+        "storyline": "Start the evening in a community bookshop that blends shelves, coffee and a bar into one social space. Morocco Bound’s Wandsworth outpost brings a south-London literary hangout feel to New Acres, making it easy to swap current reads, browse a few spines, and let the conversation move from books into Saturday-night drinks.",
+        "meeting_point_notes": "Meet just inside Morocco Bound Bookshop Wandsworth at the New Acres / Pilots Walk entrance. Host should arrive early and confirm seating for 3 people; if the shop is event-heavy or seating is tight, use Humble Grape Battersea as the backup evening drinks-and-chat venue.",
+        "created_at": "2026-07-05T09:30:58.293Z",
+        "created_by": "openai_agents"
+      }
+    ],
+    "week": 2
+  },
+  "summary": {
+    "test_case": 2,
+    "status": "completed",
+    "phase": "completed",
+    "log": "Real agents created 2 events from 2 groups across 1 batches. 2 primary venues claimed. 0 units failed. 0 venue conflicts retried.",
+    "input_user_count": 5,
+    "final_users_returned": 5,
+    "event_count": 2,
+    "matched_user_count": 5,
+    "all_users_matched": true,
+    "unmatched_user_count": 0,
+    "unmatched_user_ids": [],
+    "duplicate_matched_user_ids": [],
+    "unknown_user_ids_in_events": [],
+    "progress": {
+      "total_users": 5,
+      "batches_total": 1,
+      "batches_done": 1,
+      "groups_created": 2,
+      "groups_total": 2,
+      "planned_events": 2,
+      "events_created": 2,
+      "event_groups_done": 2,
+      "failed_units": 0,
+      "conflicts": 0
+    },
+    "failure_count": 0,
+    "failures": [],
+    "events": [
+      {
+        "id": "e-1-1-e3ed2",
+        "title": "Fulham Pages & Coffee at Nomad Books",
+        "category": "Books & Coffee",
+        "area": "Hammersmith and Fulham",
+        "date": null,
+        "time": null,
+        "user_count": 2,
+        "user_ids": [
+          "s2u1",
+          "s2u2"
+        ],
+        "primary_venue_id": "198",
+        "backup_venue_id": "600",
+        "status": null
+      },
+      {
+        "id": "e-1-2-8a902",
+        "title": "Bookshop-Bar Stories at Morocco Bound Wandsworth",
+        "category": "Books & Coffee",
+        "area": "Wandsworth",
+        "date": null,
+        "time": null,
+        "user_count": 3,
+        "user_ids": [
+          "s2u3",
+          "s2u4",
+          "s2u5"
+        ],
+        "primary_venue_id": "125",
+        "backup_venue_id": "391",
+        "status": null
+      }
+    ]
+  }
+}
