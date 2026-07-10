@@ -16,6 +16,7 @@ for (const file of [
   "styles.css",
   "app.js",
   "venues-data.js",
+  "venues-data.json",
   "london-boroughs.geojson",
 ]) {
   fs.copyFileSync(path.join(__dirname, file), path.join(publicDir, file));
